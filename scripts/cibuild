@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# skip if build is triggered by pull request
+if [ $TRAVIS_PULL_REQUEST == "true" ]; then
+  echo "this is PR, exiting"
+  exit 0
+fi
+
+# enable error reporting to the console
+set -e
+
+# clone remote repo
+git clone https://${GITHUB_API_KEY}@github.com/terminusdb/terminusdb-client-python-wiki.git --branch master
+
+# push
+git config user.email "$GITHUB_EMAIL"
+git config user.name "Cheukting"
+git remote add upstream https://${GITHUB_API_KEY}@github.com/terminusdb/terminusdb-client-python.wiki.git
+git fetch origin
+git fetch upstream
+git merge upstream/master --no-edit
+git push origin HEAD:master
+git push upstream HEAD:master
