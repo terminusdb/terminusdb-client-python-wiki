@@ -1,4 +1,15 @@
-script: bash ci_script.sh
+language: ruby
+# only run CI-builds on master branch
+branches:
+  only:
+    - master
+rvm:
+  - 2.3.0
+script: ci_script.sh
+exclude: [vendor]
+sudo: false
+
+#script:
 # - |
 #   git config user.name "Cheukting"
 #   git config user.email "$GITHUB_EMAIL"
