@@ -1,6 +1,6 @@
 script:
 - |
-  git config user.name "$GITHUB_USER"
+  git config user.name "Cheukting"
   git config user.email $GITHUB_EMAIL
   git remote remove origin
   git remote add origin https://$GITHUB_API_KEY@github.com/terminusdb/terminusdb-client-python-wiki.git > /dev/null 2>&1
