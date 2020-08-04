@@ -1,5 +1,5 @@
-git config user.name "Cheukting"
 git config user.email "$GITHUB_EMAIL"
+git config user.name "Cheukting"
 git remote remove origin
 git remote add origin https://$GITHUB_API_KEY@github.com/terminusdb/terminusdb-client-python-wiki.git > /dev/null 2>&1
 git remote add upstream https://$GITHUB_API_KEY@github.com/terminusdb/terminusdb-client-python.wiki.git > /dev/null 2>&1
