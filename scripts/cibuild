@@ -12,6 +12,8 @@ set -e
 # clone remote repo
 git clone https://${GITHUB_API_KEY}@github.com/terminusdb/terminusdb-client-python-wiki.git --branch master
 
+cd terminusdb-client-python-wiki
+
 # push
 git config user.email "$GITHUB_EMAIL"
 git config user.name "Cheukting"
