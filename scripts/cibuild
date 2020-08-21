@@ -17,7 +17,7 @@ cd terminusdb-client-python-wiki
 # push
 git config user.email "${GITHUB_EMAIL}"
 git config user.name "Cheukting"
-git remote add upstream https://${GITHUB_API_KEY}@github.com/terminusdb/terminusdb-client-python.wiki.git
+git remote add upstream https://${GIT_HUB_API_KEY}@github.com/terminusdb/terminusdb-client-python.wiki.git
 git fetch origin
 git fetch upstream
 git merge upstream/master --no-edit
