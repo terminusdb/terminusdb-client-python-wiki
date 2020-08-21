@@ -10,7 +10,7 @@ fi
 set -e
 
 # clone remote repo
-git clone https://${GITHUB_API_KEY}@github.com/terminusdb/terminusdb-client-python-wiki.git
+git clone https://${GIT_HUB_API_KEY}@github.com/terminusdb/terminusdb-client-python-wiki.git
 
 cd terminusdb-client-python-wiki
 
